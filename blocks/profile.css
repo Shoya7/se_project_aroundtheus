@@ -25,6 +25,7 @@
   display: flex;
   align-items: center;
   padding: 40px;
+  font-family: "Inter", arial, sans-serif;
 }
 
 .profile__info {
