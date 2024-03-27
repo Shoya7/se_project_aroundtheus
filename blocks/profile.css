@@ -18,10 +18,10 @@
   height: 24px;
   width: 24px;
   grid-area: button;
-  border-color: white;
+  border: 1px solid #ffffff;
   cursor: pointer;
   transition: opacity 0.1s ease;
-  border-radius: 2px;
+
   border-style: solid;
   margin-left: 18px;
 }
@@ -39,8 +39,7 @@
   box-sizing: border-box;
   transition: opacity 0.1s ease;
   border-radius: 2px;
-  border-color: white;
-  border-style: solid;
+  border: 2px solid #ffffff;
 }
 
 .profile__add-button:hover {
