@@ -1,6 +1,8 @@
 .page {
   background-color: black;
   color: white;
+  margin: 0;
+  padding: 0;
 }
 
 .page__section {
@@ -16,8 +18,14 @@
   min-height: 100vh;
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 480px) {
   .page__content {
-    padding: 0 20px;
+    max-width: 480px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .page__content {
+    max-width: 320px;
   }
 }

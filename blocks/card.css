@@ -3,6 +3,7 @@
   flex-direction: column;
   list-style: none;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .card__title {
