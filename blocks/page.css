@@ -18,14 +18,9 @@
   min-height: 100vh;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1080px) and (min-width: 621px) {
   .page__content {
-    max-width: 480px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .page__content {
-    max-width: 320px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }

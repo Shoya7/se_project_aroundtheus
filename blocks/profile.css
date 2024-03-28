@@ -56,6 +56,7 @@
   white-space: nowrap;
   overflow: hidden;
   max-width: 373px;
+  min-width: 196px;
 }
 
 .profile__descripion {
@@ -79,11 +80,12 @@
   margin-right: 24px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 620px) {
   .profile {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 42px;
   }
 
   .profile__info {
@@ -107,11 +109,7 @@
 
   .profile__description {
     width: 100%;
-    font-size: 14px;
-    line-height: 16.94px;
-    font-weight: 400;
     text-align: center;
-    max-width: 282px;
   }
 
   .profile__add-button {
@@ -126,9 +124,12 @@
   }
 }
 
-@media screen and (max-width: 1080px) and (min-width: 481px) {
+@media screen and (max-width: 1080px) and (min-width: 621px) {
   .proflie {
     display: flex;
+    justify-content: center;
     margin: 40px auto;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
