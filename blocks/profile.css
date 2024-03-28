@@ -1,5 +1,6 @@
 .profile {
   display: flex;
+  align-items: center;
 
   margin: 40px auto;
   font-family: "Inter", arial, sans-serif;
@@ -94,6 +95,9 @@
     flex-wrap: wrap;
     grid-gap: 14px 10px;
     max-width: 282px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
   }
 
   .profile__image {
@@ -102,7 +106,8 @@
 
   .profile__title {
     font-size: 22px;
-    line-height: 27px;
+    font-weight: 500;
+    line-height: 26.63px;
     margin: 0;
     max-width: 250px;
   }
@@ -127,7 +132,8 @@
 @media screen and (max-width: 1080px) and (min-width: 621px) {
   .proflie {
     display: flex;
-    justify-content: center;
+    align-items: center;
+
     margin: 40px auto;
     padding-left: 15px;
     padding-right: 15px;
