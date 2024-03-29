@@ -44,3 +44,7 @@
   height: 18px;
   border: none;
 }
+
+.card__like-button:hover {
+  background-image: url(../Images/Vector\ heart\ hover.svg);
+}
