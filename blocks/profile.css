@@ -61,7 +61,7 @@
 
 .profile__descripion {
   font-size: 18px;
-  line-height: 22px;
+  line-height: 21.78px;
   font-weight: 400;
   grid-area: description;
   margin: 0;
@@ -94,9 +94,6 @@
     flex-wrap: wrap;
     grid-gap: 14px 10px;
     max-width: 282px;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16.94px;
   }
 
   .profile__image {
@@ -111,7 +108,10 @@
     max-width: 250px;
   }
 
-  .profile__description {
+  .profile__descripion {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.94px;
     width: 100%;
     text-align: center;
   }
