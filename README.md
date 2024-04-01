@@ -21,5 +21,6 @@ The way you'll do this at work is by exporting images directly from Figma — we
 Good luck and have fun!
 
 Made to make two videos mic didnt pick up on one and VS Code did show up on the other for some reason..If I need to make another let me know lol
+https://github.com/Shoya7/se_project_aroundtheus/tree/main/scripts
 https://drive.google.com/file/d/1RjOvzOXvQ6Irrzhp3CpwqvwoyVi2aTho/view?usp=sharing
 https://drive.google.com/file/d/13uHrr-Rxn4TtB3W7AbvMjLglWF5YXIxR/view?usp=sharing
