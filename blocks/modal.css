@@ -10,6 +10,7 @@
   align-items: center;
   justify-content: center;
   padding: 0 19px;
+  display: none;
 }
 
 .modal_opened {
