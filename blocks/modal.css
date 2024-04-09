@@ -108,10 +108,9 @@
 
   .modal__close {
     background-color: transparent;
-    top: -auto;
-    right: 0;
-    height: 26px;
     width: 26px;
+    height: 26px;
+    left: calc(100% - 26px);
   }
 
   .modal__heading {
