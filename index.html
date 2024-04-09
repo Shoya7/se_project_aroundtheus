@@ -41,8 +41,12 @@
 
     <div class="modal" id="profile-edit-modal">
       <div class="modal__container">
-        <button class="modal__close" id="modal-close-button"></button>
-        <p class="modal__heading">Edit Profile</p>
+        <button
+          class="modal__close"
+          type="button"
+          id="modal-close-button"
+        ></button>
+        <h2 class="modal__heading">Edit Profile</h2>
         <form class="modal__form" id="modalForm">
           <input
             type="text"
@@ -58,7 +62,7 @@
             placeholder="Description"
             name="description"
           />
-          <button class="modal__button">Save</button>
+          <button class="modal__button" type="submit">Save</button>
         </form>
       </div>
     </div>
