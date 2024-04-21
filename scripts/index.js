@@ -44,13 +44,18 @@ const cardTemplate =
 const cardListEl = document.querySelector(".cards__list");
 const addNewCardButton = document.querySelector(".profile__add-button");
 const profileAddModal = document.querySelector("#profile-add-modal");
-const modalAddClose = document.querySelector("#modal-add-close-button");
+//  for add image
 
+const modalAddClose = document.querySelector("#modal-add-close-button");
+const cardTitleInput = document.querySelector(".modal__input_type_title");
+const cardUrlInput = document.querySelector(".modal__input_type_url");
+const addCardFormElement = document.querySelector("#add-card-form");
 // * Functions *//
 
 function closePopUp() {
   profileEditModal.classList.remove("modal_opened");
   profileAddModal.classList.remove("modal_opened");
+  // modalAddClose.classList.remove("#modal-add-close-button");
 }
 
 function handleProfileEditSubmit(e) {
@@ -59,6 +64,19 @@ function handleProfileEditSubmit(e) {
   e.preventDefault();
   closePopUp();
 }
+////
+function handleAddCardSubmit(e) {
+  e.preventDefault();
+  const name = cardTitleInput.value;
+  const link = cardUrlInput.value;
+  const cardElement = getCardElement({
+    name,
+    link,
+  });
+  cardListEl.prepend(cardElement);
+  closePopUp();
+}
+
 function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImageEl = cardElement.querySelector(".card__image");
@@ -83,8 +101,13 @@ profileEditButton.addEventListener("click", () => {
 
 modalCloseButton.addEventListener("click", closePopUp);
 profileEditForm.addEventListener("submit", handleProfileEditSubmit);
+addCardFormElement.addEventListener("submit", handleAddCardSubmit);
 modalAddClose.addEventListener("click", closePopUp);
 
+initialCards.forEach((cardData) => {
+  const cardElement = getCardElement(cardData);
+  cardListEl.prepend(cardElement);
+});
 initialCards.forEach((cardData) => {
   const cardElement = getCardElement(cardData);
   cardListEl.prepend(cardElement);
