@@ -46,6 +46,10 @@
   cursor: pointer;
 }
 
+.card__like-button_active {
+  background: url(../Images/Vector-Heart-Filled.svg);
+}
+
 .card__like-button:hover {
   background-image: url(../Images/Vector\ heart\ hover.svg);
 }
