@@ -4,6 +4,7 @@
   list-style: none;
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
 }
 
 .card__title {
@@ -52,4 +53,19 @@
 
 .card__like-button:hover {
   background-image: url(../Images/Vector\ heart\ hover.svg);
+}
+
+.card__remove-button {
+  background: transparent url(../Images/Trash.svg) center no-repeat;
+  width: 18px;
+  height: 19px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 9px;
+  right: 16px;
+}
+
+.card__remove-button:hover {
+  background-image: url(../Images/TrashHover.svg);
 }

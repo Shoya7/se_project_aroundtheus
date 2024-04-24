@@ -94,8 +94,21 @@
         </form>
       </div>
     </div>
+    <!-- Image Modal -->
+    <div class="modal" id="image-modal">
+      <div class="modal__container-image">
+        <button
+          class="modal__close modal__close_image"
+          id="image-close"
+        ></button>
+        <img src="" alt="" class="modal__image" id="image-closeup" />
+        <p class="modal__description"></p>
+      </div>
+    </div>
+
     <template id="card__template">
       <li class="card">
+        <button class="card__remove-button" type="button"></button>
         <img src="" alt="" class="card__image" />
         <div class="card__description">
           <h2 class="card__title"></h2>
