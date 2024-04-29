@@ -70,7 +70,7 @@ function handleProfileEditSubmit(e) {
   profileTitle.textContent = profileTitleInput.value;
   profileDescription.textContent = profileDescriptionInput.value;
   e.preventDefault();
-  closeModal();
+  closeModal(profileEditModal);
 }
 ////
 function handleAddCardSubmit(e) {
@@ -80,7 +80,7 @@ function handleAddCardSubmit(e) {
   renderCard({ name, link }, cardListEl);
   cardTitleInput.value = "";
   cardUrlInput.value = "";
-  closeModal();
+  closeModal(profileAddModal);
 }
 
 function renderCard(cardData, wrapper) {
