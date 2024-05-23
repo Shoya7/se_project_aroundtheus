@@ -1,6 +1,9 @@
 // enabling validation by calling enableValidation()
 // pass all the settings on call
 
+//
+
+//
 function showInputError(formEl, inputEl, { inputErrorClass, errorClass }) {
   const errorMessageEl = formEl.querySelector(`#${inputEl.id}-error`);
   inputEl.classList.add(inputErrorClass);
@@ -43,6 +46,7 @@ function enableValidation(options) {
     setEventListeners(formEl, options);
   });
 }
+
 const config = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
