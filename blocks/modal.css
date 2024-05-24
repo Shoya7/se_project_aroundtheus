@@ -96,6 +96,11 @@
   line-height: 1.21;
   border: none;
 }
+.modal__button_disabled {
+  background-color: #fff;
+  border-color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.2);
+}
 
 .modal__image {
   max-width: 75vw;
