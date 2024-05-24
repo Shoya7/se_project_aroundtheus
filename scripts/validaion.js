@@ -2,6 +2,20 @@
 // pass all the settings on call
 
 //
+function toggleButtonState(
+  inputElements,
+  submitButton,
+  { inactiveButtonClass }
+) {
+  const isFormValid = inputElements.every((input) => input.validity.valid);
+  if (!isFormValid) {
+    submitButton.classList.add(inactiveButtonClass);
+    submitButton.disabled = true;
+  } else {
+    submitButton.classList.remove(inactiveButtonClass);
+    submitButton.disabled = false;
+  }
+}
 
 //
 function showInputError(formEl, inputEl, { inputErrorClass, errorClass }) {

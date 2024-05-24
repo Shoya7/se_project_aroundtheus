@@ -44,7 +44,6 @@ const cardTemplate =
 const cardListEl = document.querySelector(".cards__list");
 const addNewCardButton = document.querySelector(".profile__add-button");
 const profileAddModal = document.querySelector("#profile-add-modal");
-const removeButton = document.querySelector(".card__remove-button");
 
 const modalAddClose = document.querySelector("#modal-add-close-button");
 const cardTitleInput = document.querySelector(".modal__input_type_title");
@@ -87,7 +86,7 @@ function handleEscapeToClose(event) {
 
 function closeModalOnClick(evt) {
   if (evt.target === evt.currentTarget) {
-    const openModal = document.querySelectorAll(".modal_opened");
+    closeModal(evt.currentTarget);
     closeModal(openModal[0]);
   }
 }
