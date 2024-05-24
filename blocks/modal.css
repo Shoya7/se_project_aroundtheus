@@ -97,9 +97,9 @@
   border: none;
 }
 .modal__button_disabled {
-  background-color: #fff;
-  border-color: rgba(0, 0, 0, 0.2);
-  color: rgba(0, 0, 0, 0.2);
+  background: #b4b3bb;
+  color: #fff;
+  border: 1px solid #b4b3bb;
 }
 
 .modal__image {

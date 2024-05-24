@@ -1,6 +1,3 @@
-// enabling validation by calling enableValidation()
-// pass all the settings on call
-
 //
 function hasInvalidInput(inputList) {
   return !inputList.every((inputEl) => inputEl.validity.valid);
@@ -47,9 +44,9 @@ function checkInputValidity(formEl, inputEl, options) {
 }
 
 function setEventListeners(formEl, options) {
-  const { inputSelector } = options;
+  const { inputSelector, submitButtonSelector } = options;
   const inputEls = [...formEl.querySelectorAll(inputSelector)];
-  const submitButton = formElement.querySelector(submitButtonSelector);
+  const submitButton = formEl.querySelector(options.submitButtonSelector);
   inputEls.forEach((inputEl) => {
     inputEl.addEventListener("input", (e) => {
       checkInputValidity(formEl, inputEl, options);
