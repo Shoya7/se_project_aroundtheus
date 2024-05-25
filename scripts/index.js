@@ -87,7 +87,6 @@ function handleEscapeToClose(event) {
 function closeModalOnClick(evt) {
   if (evt.target === evt.currentTarget) {
     closeModal(evt.currentTarget);
-    closeModal(openModal[0]);
   }
 }
 //
