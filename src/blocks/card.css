@@ -35,7 +35,7 @@
 }
 
 .card__like-button_active {
-  background-image: url(../images/Vector\ heart\ hover.svg);
+  background-image: url(../images/Vector-Heart-Filled.svg);
 }
 
 .card__like-button:hover {
