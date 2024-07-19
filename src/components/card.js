@@ -1,51 +1,58 @@
 export default class Card {
-  constructor({ name, link }, cardSelector, handleImageClick) {
-    this._name = name;
-    this._link = link;
-    this._handleImageClick = handleImageClick;
+  constructor(data, cardSelector, handleCardClick) {
+    this._name = data.name;
+    this._link = data.link;
     this._cardSelector = cardSelector;
+    this._handleCardClick = handleCardClick;
+  }
+
+  _getTemplate() {
+    return document
+      .querySelector(this._cardSelector)
+      .content.querySelector(".card")
+      .cloneNode(true);
+  }
+
+  generateCard() {
+    this._element = this._getTemplate();
+    this._setEventListeners();
+
+    const cardImage = this._element.querySelector(".card__image");
+    cardImage.src = this._link;
+    cardImage.alt = this._name;
+    this._element.querySelector(".card__subtitle").textContent = this._name;
+
+    return this._element;
   }
 
   _setEventListeners() {
-    this._cardElement
+    this._element
+      .querySelector(".card__image")
+      .addEventListener("click", () => {
+        this._handleCardClick(this._name, this._link);
+      });
+
+    this._element
       .querySelector(".card__like-button")
       .addEventListener("click", () => {
-        this._handleLikeIcon();
+        this._handleLikeClick();
       });
 
-    this._cardElement
+    this._element
       .querySelector(".card__delete-button")
       .addEventListener("click", () => {
-        this._handleDeleteCard();
+        this._handleDeleteClick();
       });
-
-    this._cardImageElement.addEventListener("click", () => {
-      this._handleImageClick({ name: this._name, link: this._link });
-    });
   }
 
-  _handleDeleteCard() {
-    this._cardElement.remove();
-    this._cardElement = null;
-  }
-
-  _handleLikeIcon() {
-    this._cardElement
+  _handleLikeClick() {
+    this._element
       .querySelector(".card__like-button")
       .classList.toggle("card__like-button_active");
   }
 
-  getView() {
-    this._cardElement = document
-      .querySelector(this._cardSelector)
-      .content.querySelector(".card")
-      .cloneNode(true);
-    this._cardImageElement = this._cardElement.querySelector(".card__image");
-    this._cardImageElement.src = this._link;
-    this._cardImageElement.alt = this._link;
-    this._cardTitle = this._cardElement.querySelector(".card__subtitle");
-    this._cardTitle.textContent = this._name;
-    this._setEventListeners();
-    return this._cardElement;
+  _handleDeleteClick() {
+    this._element.remove();
+    this._element = null;
   }
 }
