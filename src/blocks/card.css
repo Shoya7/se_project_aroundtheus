@@ -1,71 +1,71 @@
 .card {
   display: flex;
+  position: relative;
+  justify-content: center;
   flex-direction: column;
   border-radius: 10px;
-  list-style: none;
   overflow: hidden;
-  background: #fff;
+  max-width: 282px;
 }
 
 .card__image {
-  max-height: 282px;
-  min-height: 282px;
-  object-fit: cover;
-  flex: 0 0 282px;
-  cursor: pointer;
+  width: 282px;
+  height: 282px;
 }
 
 .card__description {
   display: flex;
-  color: black;
+  justify-content: space-between;
+  background-color: white;
   padding-top: 25px;
   padding-bottom: 25px;
   padding-left: 20px;
+  color: black;
   padding-right: 20px;
+  padding-left: 20px;
   align-items: center;
-  justify-content: space-between;
-  flex: 1 1 100%;
 }
 
 .card__like-button {
-  background: transparent url(../images/Like.svg) center no-repeat;
-  width: 21px;
+  background: transparent url(../images/like.svg) center no-repeat;
   height: 18px;
+  width: 21px;
   border: none;
   cursor: pointer;
+}
+
+.card__like-button_active {
+  background-image: url(../images/Vector-Heart-Filled.svg);
 }
 
 .card__like-button:hover {
   opacity: 0.5;
 }
 
-.card__like-button_active {
-  background: transparent url(../images/Vector-Heart-Filled.svg) center
-    no-repeat;
-  cursor: pointer;
-}
-
-.card__trash-button {
+.card__delete-button {
   background: transparent url(../images/Trash.svg) center no-repeat;
-  height: 19.3px;
-  width: 18px;
-  border: none;
-  cursor: pointer;
   position: absolute;
-  margin: 18px 249px 0px;
+  top: 18px;
+  right: 15px;
+  width: 18px;
+  height: 19.3px;
+  border: none;
 }
 
-.card__trash-button:hover {
+.card__delete-button:hover {
+  cursor: pointer;
   opacity: 0.6;
 }
 
-.card__title {
-  max-width: 220px;
+.card__subtitle {
+  margin: 0;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 900;
-  line-height: 29px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  line-height: 1.2;
+  letter-spacing: 0em;
+  text-wrap: nowrap;
   overflow: hidden;
-  margin: 0;
+  text-overflow: ellipsis;
+  max-width: 220px;
 }
