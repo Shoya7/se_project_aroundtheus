@@ -251,6 +251,4 @@ profileEditButton.addEventListener("click", () => {
   profileEditPopup.open();
 });
 
-addModalButton.addEventListener("click", () =>
-  newCardPopup.open(profilAddModal)
-);
+addModalButton.addEventListener("click", () => newCardPopup.open());

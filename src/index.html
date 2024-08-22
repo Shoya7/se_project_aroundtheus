@@ -169,15 +169,19 @@
     <!-- Confirm delete card modal -->
     <!--                           -->
     <div class="modal" id="delete-card-modal">
-      <div class="modal__container">
+      <div class="modal__container modal__container_type_confirm">
         <button
           class="modal__close"
           id="delete-card-close-button"
           type="button"
         ></button>
-        <h2 class="modal__heading">Are you sure?</h2>
+        <h2 class="modal__heading modal__title_type_confirm">Are you sure?</h2>
         <form class="modal__form" id="delete-card-form">
-          <button class="modal__button" id="modal-button-delete" type="submit">
+          <button
+            class="modal__button modal__button_type_confirm"
+            id="modal-button-delete"
+            type="submit"
+          >
             Yes
           </button>
         </form>
